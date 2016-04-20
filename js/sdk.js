@@ -16,12 +16,11 @@ function Sdk() {
                 url: "http://cntv.tvkou.com:8888/query?time=" + Math.random(),
                 dataType: "json",
                 timeout: 2000,
-                async: false,
                 success: function(res) {
                     var nObject = res[0]
                     console.log(nObject.target.id)
                     console.log(oObject)
-                    if (oObject == null || nObject.target.id !== oObject.target.id) {
+                    if (oObject == null || nObject.target.id !== oObject.target.id) { // typeof nObject.target.id !== "undefined"
                         callback(nObject)
                     }
                     oObject = nObject
