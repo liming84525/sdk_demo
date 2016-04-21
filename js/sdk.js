@@ -18,9 +18,11 @@ function Sdk() {
                 timeout: 2000,
                 success: function(res) {
                     var nObject = res[0]
-                    console.log(nObject.target.id)
-                    console.log(oObject)
-                    if (oObject == null || nObject.target.id !== oObject.target.id) { // typeof nObject.target.id !== "undefined"
+                    if (typeof nObject !== "undefined") {
+                        console.log(nObject.target.id)
+                        console.log(oObject)
+                    }
+                    if ( typeof nObject  !==  "undefined" && (oObject == null || nObject.target.id !== oObject.target.id) ) {
                         callback(nObject)
                     }
                     oObject = nObject
