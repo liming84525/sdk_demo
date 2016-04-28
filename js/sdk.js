@@ -13,7 +13,7 @@ function Sdk() {
     function __startMonitor(callback) {
         i = window.setInterval(function() {
             $.ajax({
-                url: "http://cntv.tvkou.com:8888/query?time=" + Math.random(),
+                url: "http://cntv-front-env.cn-north-1.eb.amazonaws.com.cn/query?time=" + Math.random(),
                 dataType: "json",
                 timeout: 2000,
                 success: function(res) {
