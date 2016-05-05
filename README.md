@@ -1,26 +1,14 @@
 ###用法
 依赖Jquery, 导入jquery.js和 sdk.js
 
-1. 新建对象
+####startup
 ```javascript
-var sdk = new Sdk()
-```
-
-2. 写一个回调函数
-```javascript
-function callback(res) {
+var sdk = new Sdk()        //新建对象
+function callback(res) {   //写一个毁掉方法
   //使用res
 }
-```
-
-3. 开始监测数据
-```javascript
-sdk.StartMonitor(callback)
-```
-
-4. 停止监测数据
-```javascript
-sdk.StopMonitor()
+sdk.StartMonitor(callback) //开始监测
+//sdk.StopMonitor()        //停止监测
 ```
 
 注：见index.html
